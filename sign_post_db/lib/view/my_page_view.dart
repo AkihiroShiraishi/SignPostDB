@@ -16,35 +16,48 @@ class MyPageView extends ConsumerWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            height: MediaQuery.of(context).size.height,
-            child: Column(
-              children: [
-                Spacer(),
-                circleImage(200, 200, 'images/profile_image_mock.png'),
-                SizedBox(
-                  height: 30,
-                ),
-                borderedTextField(viewModelState.nameController, 'Name', 30,
-                    Colors.blueGrey, 300, 50, TextInputType.text, 1),
-                SizedBox(
-                  height: 30,
-                ),
-                borderedTextField(viewModelState.departmentController, 'Department', 30,
-                    Colors.blueGrey, 300, 50, TextInputType.text, 1),
-                SizedBox(
-                  height: 30,
-                ),
-                borderedTextField(viewModelState.skillsController, 'Skills', 30,
-                    Colors.blueGrey, 300, 50, TextInputType.multiline, 5),
-                SizedBox(
-                  height: 30,
-                ),
-                borderedTextField(viewModelState.favoriteController, 'Favorite',
-                    30, Colors.blueGrey, 300, 50, TextInputType.multiline, 5),
-                Spacer()
-              ],
-            )
-          ),
+              height: MediaQuery.of(context).size.height,
+              child: Column(
+                children: [
+                  Spacer(),
+                  CircleImage(200, 200, 'assets/profile_image_mock.png'),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  BorderedTextField(viewModelState.nameController, 'Name', 30,
+                      Colors.blueGrey, 300, 50, TextInputType.text, 1),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  BorderedTextField(
+                      viewModelState.departmentController,
+                      'Department',
+                      30,
+                      Colors.blueGrey,
+                      300,
+                      50,
+                      TextInputType.text,
+                      1),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  BorderedTextField(viewModelState.skillsController, 'Skills',
+                      30, Colors.blueGrey, 300, 50, TextInputType.multiline, 5),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  BorderedTextField(
+                      viewModelState.favoriteController,
+                      'Favorite',
+                      30,
+                      Colors.blueGrey,
+                      300,
+                      50,
+                      TextInputType.multiline,
+                      5),
+                  Spacer()
+                ],
+              )),
         ),
       ),
     );

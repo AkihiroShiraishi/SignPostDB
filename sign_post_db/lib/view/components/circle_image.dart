@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget circleImage(double width, double height, String image) {
+Widget CircleImage(double width, double height, String image) {
   return Container(
     width: width,
     height: height,

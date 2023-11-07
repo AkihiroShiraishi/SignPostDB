@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget borderedTextField(
+Widget BorderedTextField(
     TextEditingController controller,
     String hint,
     double radius,
