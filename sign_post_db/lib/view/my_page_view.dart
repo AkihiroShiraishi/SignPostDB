@@ -1,14 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sign_post_db/view_model/my_page/my_page_view_model.dart';
 
-class MyPageView extends StatelessWidget {
+import 'components/circle_image.dart';
+import 'components/bordered_textfield.dart';
+
+class MyPageView extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final viewModel = ref.read(myPageViewModelProvider.notifier);
+    final viewModelState = ref.watch(myPageViewModelProvider);
+
     return Scaffold(
-      backgroundColor: Colors.orange,
-      body: Center(
-        child: Text(
-          "MyPage",
-          style: TextStyle(fontSize: 20),
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: [
+                Spacer(),
+                circleImage(200, 200, 'images/profile_image_mock.png'),
+                SizedBox(
+                  height: 30,
+                ),
+                borderedTextField(viewModelState.nameController, 'Name', 30,
+                    Colors.blueGrey, 300, 50, TextInputType.text, 1),
+                SizedBox(
+                  height: 30,
+                ),
+                borderedTextField(viewModelState.departmentController, 'Department', 30,
+                    Colors.blueGrey, 300, 50, TextInputType.text, 1),
+                SizedBox(
+                  height: 30,
+                ),
+                borderedTextField(viewModelState.skillsController, 'Skills', 30,
+                    Colors.blueGrey, 300, 50, TextInputType.multiline, 5),
+                SizedBox(
+                  height: 30,
+                ),
+                borderedTextField(viewModelState.favoriteController, 'Favorite',
+                    30, Colors.blueGrey, 300, 50, TextInputType.multiline, 5),
+                Spacer()
+              ],
+            )
+          ),
         ),
       ),
     );

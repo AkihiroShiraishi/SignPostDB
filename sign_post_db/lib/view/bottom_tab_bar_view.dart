@@ -5,7 +5,8 @@ import 'package:sign_post_db/view/my_page_view.dart';
 import 'package:sign_post_db/view/member_list_view.dart';
 import 'package:sign_post_db/view/company_info_view.dart';
 import 'package:sign_post_db/view/calendar_view.dart';
-import 'package:sign_post_db/view_model/bottom_tab_bar_view_model.dart';
+import 'package:sign_post_db/view_model/bottom_tab_bar/bottom_tab_bar_view_model.dart';
+
 
 class BottomTabBarPage extends ConsumerWidget {
   final _pageWidgets = [
@@ -23,6 +24,8 @@ class BottomTabBarPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(BottomTabBarMessage.appTitle),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.lightBlue,
       ),
       body: _pageWidgets.elementAt(viewModelState.currentIndex),
       bottomNavigationBar: BottomNavigationBar(
@@ -36,7 +39,9 @@ class BottomTabBarPage extends ConsumerWidget {
               icon: Icon(Icons.calendar_month), label: 'Calendar'),
         ],
         currentIndex: viewModelState.currentIndex,
-        fixedColor: Colors.blueAccent,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black,
+        backgroundColor: Colors.lightBlue,
         onTap: viewModel.tappedTabItem,
         type: BottomNavigationBarType.fixed,
       ),

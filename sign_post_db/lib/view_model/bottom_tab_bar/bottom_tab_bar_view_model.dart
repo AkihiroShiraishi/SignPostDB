@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import 'package:sign_post_db/state/bottom_tab_bar_state/bottom_tab_bar_state.dart';
+import 'package:sign_post_db/state/bottom_tab_bar/bottom_tab_bar_state.dart';
 
 part 'bottom_tab_bar_view_model.g.dart';
 

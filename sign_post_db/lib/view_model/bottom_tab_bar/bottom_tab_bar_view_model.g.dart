@@ -7,7 +7,7 @@ part of 'bottom_tab_bar_view_model.dart';
 // **************************************************************************
 
 String _$bottomTabBarViewModelHash() =>
-    r'13edb84261f94065448c9a309df97428b1c730f6';
+    r'b5b57ccb4a2cdf2c86e866f2401e5cd7bb9c6f8f';
 
 /// See also [BottomTabBarViewModel].
 @ProviderFor(BottomTabBarViewModel)
