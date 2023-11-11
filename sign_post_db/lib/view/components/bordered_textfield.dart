@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget BorderedTextField(
-    TextEditingController controller,
-    String hint,
-    double radius,
-    Color color,
-    double width,
-    double height,
-    TextInputType keyboradType,
-    int? maxLine) {
+Widget BorderedTextField(TextEditingController controller, String hint,
+    double radius, Color color, double width, double height) {
   return Container(
     width: width,
     // height: height,
     child: TextField(
       controller: controller,
-      keyboardType: keyboradType,
-      minLines: 1,
-      maxLines: maxLine,
       decoration: InputDecoration(
         hintText: hint,
         enabledBorder: OutlineInputBorder(
