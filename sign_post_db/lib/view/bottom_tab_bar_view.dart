@@ -25,7 +25,7 @@ class BottomTabBarPage extends ConsumerWidget {
       appBar: AppBar(
         title: Text(BottomTabBarMessage.appTitle),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.lightBlue.shade300,
       ),
       body: _pageWidgets.elementAt(viewModelState.currentIndex),
       bottomNavigationBar: BottomNavigationBar(
@@ -41,7 +41,7 @@ class BottomTabBarPage extends ConsumerWidget {
         currentIndex: viewModelState.currentIndex,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.black,
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.lightBlue.shade300,
         onTap: viewModel.tappedTabItem,
         type: BottomNavigationBarType.fixed,
       ),
