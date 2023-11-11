@@ -25,7 +25,7 @@ class MyPageView extends ConsumerWidget {
                     height: 30,
                   ),
                   BorderedTextField(viewModelState.nameController, 'Name', 30,
-                      Colors.blueGrey, 300, 50, TextInputType.text, 1),
+                      Colors.blueGrey, 300, 50),
                   SizedBox(
                     height: 30,
                   ),
@@ -35,14 +35,12 @@ class MyPageView extends ConsumerWidget {
                       30,
                       Colors.blueGrey,
                       300,
-                      50,
-                      TextInputType.text,
-                      1),
+                      50),
                   SizedBox(
                     height: 30,
                   ),
                   BorderedTextField(viewModelState.skillsController, 'Skills',
-                      30, Colors.blueGrey, 300, 50, TextInputType.text, 1),
+                      30, Colors.blueGrey, 300, 50),
                   SizedBox(
                     height: 30,
                   ),
@@ -52,9 +50,7 @@ class MyPageView extends ConsumerWidget {
                       30,
                       Colors.blueGrey,
                       300,
-                      50,
-                      TextInputType.text,
-                      1),
+                      50),
                   Spacer()
                 ],
               )),
